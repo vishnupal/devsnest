@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            background: #FFF;
+            border: 10px solid #FF0000;
+            border-radius: 50%;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            width: 300px;
+        }
+
+
+        .hour {
+            height: 120px;
+            width: 4px;
+            background: rgb(17, 14, 14);
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            animation: tick 43200s infinite linear;
+            -webkit-animation: tick 43200s infinite linear;
+        }
+
+        .minute {
+            height: 100px;
+            width: 4px;
+            background: rgb(19, 12, 12);
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            animation: tick 3600s infinite linear;
+            -webkit-animation: tick 3600s infinite linear;
+        }
+
+        .second {
+            height: 60px;
+            width: 4px;
+            background: #1b1111;
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            animation: tick 60s infinite linear;
+            -webkit-animation: tick 60s infinite linear;
+        }
+
+        .hour,
+        .minute,
+        .second {
+            transform-origin: 2px 100%;
+            -webkit-transform-origin: 2px 100%;
+        }
+
+        @keyframes tick {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes tick {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="twelve"></div>
+        <div class="three"></div>
+        <div class="six"></div>
+        <div class="nine"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+    </div>
+</body>
+
+</html>
